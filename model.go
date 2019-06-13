@@ -38,9 +38,6 @@ func NewAPDEX() *APDEX {
 	a.Start()
 	return &a
 }
-func (a *APDEX) Start() {
-	a.Begin = time.Now()
-}
 func (a *APDEX) Round() time.Duration {
 	a.RoundTrip = time.Since(a.Begin)
 	a.Start()
